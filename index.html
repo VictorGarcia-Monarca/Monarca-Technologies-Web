@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monarca Technologies — Prevención Sensorial Crítica</title>
+<!-- Google Fonts: Space Grotesk (Titulares geométricos/angulares), Orbitron (Cifras/Badges), Inter (Cuerpo ultra-limpio) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Orbitron:wght@600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    if (typeof tailwind !== "undefined") {
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: "#070709",
+              charcoal: "#0d0d11",
+              surface: "#121217",
+              card: "#16161c",
+              border: "#202026",
+              accent: "#f97316",
+              accentMuted: "rgba(249,115,22,0.12)",
+              subtle: "#888894",
+              light: "#ededf0"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            heading: ["Space Grotesk", "sans-serif"],
+            tech: ["Orbitron", "sans-serif"]
+          }
+        }
+      }
+    };
+    }
+  </script>
+<style>
+    body {
+      background-color: #070709;
+      color: #ededf0;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection {
+      background-color: #f97316;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-brand-black text-brand-light antialiased min-h-screen selection:bg-brand-accent selection:text-black">
+<!-- NAVBAR: Minimalista, espacioso y pulcro estilo Nothing / Tesla -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#070709]/80 backdrop-blur-xl border-b border-brand-border/60">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+<!-- Logo Monarca Technologies -->
+<a class="flex items-center gap-3 group" data-path="inicio" href="#">
+<img alt="Monarca Technologies" class="h-7 w-auto object-contain brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpsn8daYi9bpSM861EEZzOu8jPhlJRCzeDZUyf4jggADxaYD4GhS5vIZUmwFaIbh3WdvdgUzIg6TKWj9vJjDAhDdBsf987_LfvHQpmkZ8thVGMFNXTsVbjc8UCWsocr3g3y52YX98z-ZaqxOlA_geyTKm3kCpvnNHWjodLzyekegGpDYF7Cawh53s5n_XFh7CvjqfBzzjGxel5FNN9KBr39IW9HneMeuXj6QBkA-VQrKbZpCCYgaoGrw-rOPUyhnMO-Q"/>
+</a>
+<!-- Navegación central sobria -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-heading font-medium tracking-wide">
+<a class="text-white hover:text-brand-accent transition-colors" data-path="inicio" href="#">Inicio</a>
+<a class="text-brand-subtle hover:text-white transition-colors" data-path="monarca-drive" href="#monarca-drive">Monarca Drive</a>
+<a class="text-brand-subtle hover:text-white transition-colors" data-path="colibri-ia" href="#colibri-ia">Colibrí IA</a>
+<a class="text-brand-subtle hover:text-white transition-colors" data-path="equipo" href="#equipo">Equipo</a>
+</nav>
+<!-- Botón lateral minimalista -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center gap-2 text-xs font-heading font-semibold tracking-wider uppercase px-4 py-2 rounded-full border border-brand-accent/40 text-brand-accent bg-brand-accent/5 hover:bg-brand-accent hover:text-black transition-all duration-200" data-path="defensa-tecnica-cbtis-149" href="presentacion.html">
+<span>Descubre más (Presentación)</span>
+<span class="text-xs">→</span>
+</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-brand-border text-brand-light hover:border-brand-accent/50 hover:text-brand-accent transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-2xl" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Panel de navegación móvil (oculto por defecto, solo visible por debajo de md) -->
+<div class="hidden md:hidden border-t border-brand-border/60 bg-[#070709]/98 backdrop-blur-xl" id="mobile-menu">
+<nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1 text-sm font-heading font-medium">
+<a class="px-3 py-3 rounded-lg text-white hover:bg-brand-charcoal transition-colors" data-path="inicio" href="#">Inicio</a>
+<a class="px-3 py-3 rounded-lg text-brand-subtle hover:bg-brand-charcoal hover:text-white transition-colors" data-path="monarca-drive" href="#monarca-drive">Monarca Drive</a>
+<a class="px-3 py-3 rounded-lg text-brand-subtle hover:bg-brand-charcoal hover:text-white transition-colors" data-path="colibri-ia" href="#colibri-ia">Colibrí IA</a>
+<a class="px-3 py-3 rounded-lg text-brand-subtle hover:bg-brand-charcoal hover:text-white transition-colors" data-path="equipo" href="#equipo">Equipo</a>
+<a class="mt-2 inline-flex items-center justify-center gap-2 text-xs font-heading font-semibold tracking-wider uppercase px-4 py-3 rounded-full border border-brand-accent/40 text-brand-accent bg-brand-accent/5" data-path="defensa-tecnica-cbtis-149" href="presentacion.html">
+<span>Descubre más (Presentación)</span>
+<span class="text-xs">→</span>
+</a>
+</nav>
+</div>
+</header>
+<main class="pt-20">
+<!-- HERO SECTION: Espacioso, tipografía geométrica contundente y sin ruido -->
+<section class="relative min-h-[85vh] flex flex-col justify-center items-center px-6 sm:px-8 py-28 sm:py-36 overflow-hidden">
+<!-- Resplandor sutil aeroespacial tenue -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-accent/[0.04] blur-[160px] pointer-events-none rounded-full"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10 flex flex-col items-center">
+<!-- Badge minimalista -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-border bg-brand-charcoal text-[11px] font-tech tracking-[0.2em] text-brand-subtle uppercase mb-8">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+          CBTis 149 • Edge Computing
+        </div>
+<!-- Título -->
+<h1 class="text-4xl sm:text-6xl md:text-7xl font-heading font-semibold tracking-tight text-white leading-[1.08] max-w-3xl">
+          El futuro de la <span class="text-brand-accent">seguridad vial.</span>
+</h1>
+<!-- Subtítulo limpio -->
+<p class="mt-6 text-base sm:text-lg md:text-xl text-brand-subtle max-w-2xl font-normal leading-relaxed">
+          Prevenimos accidentes por fatiga y somnolencia al volante mediante inteligencia artificial en el borde y telemetría inercial accesible.
+        </p>
+<!-- Botones de Acción -->
+<div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+<a class="px-7 py-3.5 rounded-full bg-brand-accent text-black font-heading font-semibold text-sm tracking-wide hover:brightness-110 transition-transform active:scale-95 shadow-[0_0_30px_rgba(249,115,22,0.2)]" data-path="defensa-tecnica-cbtis-149" href="presentacion.html">
+            Ver presentación / defensa →
+          </a>
+<a class="px-7 py-3.5 rounded-full border border-brand-border bg-brand-surface text-brand-light font-heading font-medium text-sm tracking-wide hover:border-brand-subtle/50 hover:bg-brand-charcoal transition-colors" href="#monarca-drive">
+            Conocer la tecnología
+          </a>
+</div>
+<!-- 3 Métricas sobrias con amplio espacio negativo -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 w-full mt-24 pt-12 border-t border-brand-border/60">
+<div class="flex flex-col items-center text-center">
+<span class="font-tech text-3xl sm:text-4xl font-extrabold text-white tracking-tight">&gt;95<span class="text-brand-accent text-2xl">%</span></span>
+<span class="text-xs font-heading font-semibold uppercase tracking-widest text-white mt-2">Precisión Global</span>
+<p class="text-xs text-brand-subtle mt-1 max-w-[200px]">Ensemble neuronal dual sin sesgo fenotípico</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-tech text-3xl sm:text-4xl font-extrabold text-white tracking-tight">100<span class="text-brand-accent text-2xl">%</span></span>
+<span class="text-xs font-heading font-semibold uppercase tracking-widest text-white mt-2">Offline Edge</span>
+<p class="text-xs text-brand-subtle mt-1 max-w-[200px]">Inferencia 100% local en microcomputadora</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-tech text-3xl sm:text-4xl font-extrabold text-white tracking-tight">$1,778 <span class="text-xs text-brand-subtle font-sans font-normal tracking-normal">MXN</span></span>
+<span class="text-xs font-heading font-semibold uppercase tracking-widest text-white mt-2">Costo Accesible</span>
+<p class="text-xs text-brand-subtle mt-1 max-w-[200px]">BOM democrático frente a sistemas de lujo</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 1: MONARCA DRIVE -->
+<section class="py-28 sm:py-36 border-t border-brand-border/60 relative" id="monarca-drive">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+<!-- Columna Izquierda: Logo nítido y contenedor con resplandor sutil -->
+<div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
+<div class="w-full max-w-md aspect-square rounded-2xl bg-brand-charcoal border border-brand-border flex items-center justify-center p-10 relative overflow-hidden group">
+<div class="absolute inset-0 bg-radial from-brand-accent/[0.04] to-transparent pointer-events-none"></div>
+<img alt="Monarca Drive" class="w-4/5 h-4/5 object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_20px_rgba(255,255,255,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYACVgQJZWOArWqpMh82ybp0YlnV_WjUSODU_RelMkwhQq6mmtYTnV17YdAWMbiv_XPuNe1XR7vgv4nmaJR3H8Glb6PbQuqajCL_LLialv-AX6UkzuGZr8Xp9E_6I6_WuBJyUoBwg9LWh8v1-HuORZ0t950e-cWC9icCz4fBhdgfPUMIimp8jb1OWx7VleMGBRlEaLtYAj8yTUZNZx8uXQLop8-TNiYTXxWEj1H7P-ikyOCZpk5oRmlj7ZRzXehGEkdw"/>
+</div>
+</div>
+<!-- Columna Derecha: Explicación y puntos clave -->
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col">
+<span class="text-xs font-tech tracking-[0.2em] text-brand-accent uppercase mb-3">Hardware &amp; Telemetría</span>
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
+              ¿Qué es Monarca Drive?
+            </h2>
+<p class="mt-5 text-base sm:text-lg text-brand-subtle leading-relaxed font-normal">
+              Un sistema embebido no invasivo diseñado para prevenir siniestros viales por fatiga o microsueños. Integra visión artificial infrarroja con telemetría inercial física para vigilar tanto al conductor como la estabilidad del chasis en tiempo real.
+            </p>
+<!-- 3 Puntos breves y directos -->
+<div class="mt-8 space-y-5">
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-brand-accent mt-2 flex-shrink-0"></div>
+<div>
+<h3 class="font-heading font-semibold text-white text-base">Fusión Sensorial en Tiempo Real</h3>
+<p class="text-sm text-brand-subtle mt-0.5">Sincroniza cámara gran angular IR con sensor de inercia y aceleración triaxial MPU-6050 vía bus I2C.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-brand-accent mt-2 flex-shrink-0"></div>
+<div>
+<h3 class="font-heading font-semibold text-white text-base">Alerta Acústica y Visual de Cabina</h3>
+<p class="text-sm text-brand-subtle mt-0.5">Disparo inmediato de buzzer piezoeléctrico de alta penetración (&gt;85 dB) y estroboscopio LED frontal.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-2 h-2 rounded-full bg-brand-accent mt-2 flex-shrink-0"></div>
+<div>
+<h3 class="font-heading font-semibold text-white text-base">Instalación Universal Plug &amp; Play</h3>
+<p class="text-sm text-brand-subtle mt-0.5">Montaje en minutos sobre cualquier tablero vehicular mediante conexión estándar USB de 5V.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: COLIBRÍ IA -->
+<section class="py-28 sm:py-36 border-t border-brand-border/60 relative bg-brand-charcoal/30" id="colibri-ia">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-center">
+<!-- Columna Izquierda: Explicación de la Red Neuronal -->
+<div class="lg:col-span-7 flex flex-col">
+<span class="text-xs font-tech tracking-[0.2em] text-brand-accent uppercase mb-3">Inteligencia Artificial en el Borde</span>
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight leading-tight">
+              ¿Qué es Colibrí IA?
+            </h2>
+<p class="mt-5 text-base sm:text-lg text-brand-subtle leading-relaxed font-normal">
+              Nuestro motor neuronal propietario ultraligero, calibrado específicamente con más de 4,000 muestras faciales. Su arquitectura divide el procesamiento en dos redes convolucionales independientes para operar con precisión quirúrgica en condiciones de total oscuridad o uso de lentes.
+            </p>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 rounded-xl bg-brand-card/60 border border-brand-border">
+<span class="text-xs font-tech text-brand-accent uppercase tracking-wider block mb-2">Red Dual Especializada</span>
+<p class="text-sm text-brand-subtle">Una red analiza EAR dinámico (ojos) y otra MAR adaptativo (boca) para eliminar falsos positivos.</p>
+</div>
+<div class="p-6 rounded-xl bg-brand-card/60 border border-brand-border">
+<span class="text-xs font-tech text-brand-accent uppercase tracking-wider block mb-2">15 a 20 FPS en Raspberry Pi</span>
+<p class="text-sm text-brand-subtle">Cero latencia en nube. Inferencia local ultra-rápida y soberana sin requerir conexión a internet.</p>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Logo Colibrí IA Geométrico Protagonista -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="w-full max-w-md aspect-square rounded-2xl bg-brand-charcoal border border-brand-border flex items-center justify-center p-10 relative overflow-hidden group">
+<div class="absolute inset-0 bg-radial from-brand-accent/[0.04] to-transparent pointer-events-none"></div>
+<img alt="Colibrí IA" class="w-4/5 h-4/5 object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_20px_rgba(255,255,255,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP58I0PsdbLEe7kVT0okZw_13736GsvbzrN53K23-4UWXDTKArYEiA1FH7T70-CXHq8IhYkDww2UtZM2Ok0GBJ3nziHQOTL6de9YNTJaaOTFD0yOI7GODR37HwItVqnd2QBw6X_aIONpWAVFQXI4_oGChN_ySKDiFpgEqb_RNELgrC6lSF-KJPSkrszsuir_ahQGV6KLLt53QfceQvjY3MLLTHNf3FYbIIqkpI2aZUNbtOj-Pp8LTOoYZYFXPGXMbtWQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: EQUIPO Y CBTis 149 -->
+<section class="py-28 sm:py-36 border-t border-brand-border/60 relative" id="equipo">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="max-w-2xl mb-16">
+<span class="text-xs font-tech tracking-[0.2em] text-brand-accent uppercase mb-3 block">Desarrollo &amp; Mentoría</span>
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-white tracking-tight">
+            Equipo y Respaldo Institucional
+          </h2>
+<p class="mt-3 text-brand-subtle text-base font-normal">
+            Ingeniería desarrollada en las aulas y laboratorios del CBTis No. 149 en Morelia, Michoacán.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Víctor Fabricio García Mendoza -->
+<div class="p-8 rounded-2xl bg-brand-card/40 border border-brand-border hover:border-brand-subtle/40 transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="w-10 h-10 rounded-full bg-brand-charcoal border border-brand-border flex items-center justify-center font-heading font-bold text-xs text-white">VF</span>
+<span class="text-[11px] font-tech text-brand-accent tracking-wider uppercase">Fundador</span>
+</div>
+<h3 class="text-lg font-heading font-bold text-white">Víctor Fabricio García Mendoza</h3>
+<p class="text-xs text-brand-subtle font-medium mt-1 font-heading">Estudiante de Mecatrónica • Creador</p>
+<p class="text-sm text-brand-subtle mt-4 leading-relaxed">
+                Arquitectura de hardware, entrenamiento de modelos convolucionales de Colibrí IA e integración de firmware embebido.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/40 text-[11px] font-tech text-brand-subtle/80 tracking-widest uppercase">
+              CBTis 149 Morelia
+            </div>
+</div>
+<!-- Prof. Raúl Armando Díaz M. -->
+<div class="p-8 rounded-2xl bg-brand-card/40 border border-brand-border hover:border-brand-subtle/40 transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="w-10 h-10 rounded-full bg-brand-charcoal border border-brand-border flex items-center justify-center font-heading font-bold text-xs text-white">RD</span>
+<span class="text-[11px] font-tech text-brand-subtle tracking-wider uppercase">Asesor</span>
+</div>
+<h3 class="text-lg font-heading font-bold text-white">Prof. Raúl Armando Díaz M.</h3>
+<p class="text-xs text-brand-subtle font-medium mt-1 font-heading">Asesor de Hardware &amp; Firmware</p>
+<p class="text-sm text-brand-subtle mt-4 leading-relaxed">
+                Supervisión técnica de circuitos impresos (PCB), eficiencia de fuentes conmutadas y estabilidad de buses de telemetría.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/40 text-[11px] font-tech text-brand-subtle/80 tracking-widest uppercase">
+              Docencia Técnica
+            </div>
+</div>
+<!-- Prof. Miguel Ángel Flores M. -->
+<div class="p-8 rounded-2xl bg-brand-card/40 border border-brand-border hover:border-brand-subtle/40 transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="w-10 h-10 rounded-full bg-brand-charcoal border border-brand-border flex items-center justify-center font-heading font-bold text-xs text-white">MF</span>
+<span class="text-[11px] font-tech text-brand-subtle tracking-wider uppercase">Asesor</span>
+</div>
+<h3 class="text-lg font-heading font-bold text-white">Prof. Miguel Ángel Flores M.</h3>
+<p class="text-xs text-brand-subtle font-medium mt-1 font-heading">Asesor Metodológico</p>
+<p class="text-sm text-brand-subtle mt-4 leading-relaxed">
+                Rigor del método experimental científico, consistencia de datos y estructuración de la memoria técnica de defensa.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-brand-border/40 text-[11px] font-tech text-brand-subtle/80 tracking-widest uppercase">
+              Investigación Aplicada
+            </div>
+</div>
+</div>
+<!-- Banner de llamada para Jurado / Defensa -->
+<div class="mt-16 p-8 sm:p-12 rounded-2xl border border-brand-border bg-brand-charcoal flex flex-col sm:flex-row items-center justify-between gap-8">
+<div>
+<h3 class="text-xl font-heading font-bold text-white">¿Evaluando este proyecto para el certamen?</h3>
+<p class="text-sm text-brand-subtle mt-1">Accede al desglose analítico de costos, simulación de cabina en vivo y comparativa técnica.</p>
+</div>
+<a class="px-6 py-3 rounded-full bg-brand-accent text-black font-heading font-semibold text-xs tracking-wider uppercase whitespace-nowrap hover:brightness-110 transition-all flex-shrink-0" data-path="defensa-tecnica-cbtis-149" href="presentacion.html">
+            Ir a la presentación →
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER: Discreto, limpio, monocromático con los 3 logotipos -->
+<footer class="border-t border-brand-border/60 bg-brand-black py-16">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col items-center gap-10">
+<!-- Logos discretos en escala de grises -->
+<div class="flex items-center justify-center gap-8 sm:gap-14 opacity-50 hover:opacity-80 transition-opacity">
+<img alt="Monarca Technologies" class="h-5 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVj0VaIkUMCF1G_Aa414ngVVFQOk-wG9kZ2htqg7J5nvz3dvBHy55p0TcGPX7Hex76Lasc_tkMyM0WXurwQayP1qa-Kya4CCcp0iIjmPSf9f4NGknGnnjvnJ_9f-TnrQj3GVptM-LF-QaAyFmvDN3r-MOIgi-VSXx4BnXGqKZFiyKd2YCBDmz9mIRr-fAo0yHX7k1FnrC_Ucs1Frf3kVHtwBHsuQvqUitZHd8KEYcBqyFGGNhw0-uZ6D2kf8e32VPK7A"/>
+<img alt="Monarca Drive" class="h-7 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2E4Db8QPt4P6LEfiOPwyRqIqkBaaNhINFycmEbRIuxRhVY6LFVuY3jc9fxC6h9fIKdJhs7K4ZTa5nOmkLomnE5pTwY7vx8nvFSUVUEHFt9EQ-z5HrSLfU4PKSXvssrDvADLU4hw-W-KVDglVWZqknnGYystshNUNY8SEDxoL0vmRqeXJydOUqYu-cK_F3MU8IHRzmuz7WrgrYPxCVkqyMYNzCmjRBrxHZJSHddzWNXL6qzngGjVBgg3qaGKS5XMSm7w"/>
+<img alt="Colibrí IA" class="h-7 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHs4LYP9NVpKwVqdWNfmbPg5QVUGaSlc8gczw6zYu4mMAUotBFbboyMqI65NvQz0pVHkpwAxCpxaDMOu0TOKdnLyPDu1rLgs1ZYAQEojAwq4n5hAA5vuKAQ1e35ej1JAfUZVWabL5_ySnD2Om7O0AeXOa7f_6qrChN0fZspkER3b6VpC936C-_jwsLJjMZxiZkBKWeYTSe5IGzwH6jII9n0j54KVCTkVUfGqQfsyyUdSUVlRCnO_LT3fzq2DnvpvRe9Q"/>
+</div>
+<!-- Enlaces y Mención institucional -->
+<div class="flex flex-col sm:flex-row items-center justify-between w-full pt-8 border-t border-brand-border/40 text-xs text-brand-subtle gap-4 font-sans">
+<p>© 2025 Monarca Technologies • Desarrollado con orgullo en CBTis No. 149, Morelia.</p>
+<div class="flex items-center gap-6 font-heading">
+<a class="hover:text-brand-accent transition-colors" data-path="defensa-tecnica-cbtis-149" href="presentacion.html">Defensa Técnica</a>
+<a class="hover:text-white transition-colors" data-path="contacto-fundadores" href="#">Contacto con Fundadores</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT PARA EL MENÚ MÓVIL -->
+<script>
+    (function () {
+      const btn = document.getElementById('mobile-menu-btn');
+      const panel = document.getElementById('mobile-menu');
+      const icon = document.getElementById('mobile-menu-icon');
+      if (!btn || !panel || !icon) return;
+
+      function closeMenu() {
+        panel.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        icon.textContent = 'menu';
+      }
+
+      btn.addEventListener('click', function () {
+        const isOpen = !panel.classList.contains('hidden');
+        panel.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        icon.textContent = isOpen ? 'menu' : 'close';
+      });
+
+      panel.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+</body></html>

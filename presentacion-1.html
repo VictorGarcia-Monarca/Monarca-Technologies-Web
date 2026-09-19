@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Defensa Técnica CBTis 149 | Monarca Technologies</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Orbitron:wght@600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    if (typeof tailwind !== "undefined") {
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#111113",
+            "surface-subtle": "#161619",
+            "surface-card": "#1a1a1e",
+            "surface-border": "#28282e",
+            "surface-highlight": "#202026",
+            "primary": "#ffb690",
+            "primary-container": "#f97316",
+            "secondary": "#ffb95f",
+            "accent-glow": "#ff9357",
+            "text-main": "#f3f3f5",
+            "text-muted": "#9e9da8",
+            "text-faint": "#6b6a75",
+            "error-alert": "#ff6b6b"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            display: ["Space Grotesk", "sans-serif"],
+            orbitron: ["Orbitron", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+    }
+  </script>
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #111113;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #28282e;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#0e0e11] font-sans text-text-main antialiased min-h-screen selection:bg-primary-container selection:text-black">
+<!-- NAVBAR MINIMALISTA -->
+<header class="fixed top-0 inset-x-0 z-50 bg-[#0e0e11]/90 backdrop-blur-md border-b border-surface-border/60">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-3 group" href="#">
+<img alt="Monarca Technologies" class="h-6 w-auto object-contain filter invert opacity-95 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwYgRrmmXnTwQd6TtQzzlOjFTTQu-vY7PXhBF9iDLNaz9bwahq_KcKVlclr679lBS8yTK9Dkqp12690fRToWt3qj4-Mwe2t9TltkBq-TL9XzbK9grKw4JKeMMbojPnCakUBKHtrhuBIRr0w_eLxVcAfSdLOb8VTvEIOyquY9yUOR7WVHpGRvaFUehQ2kncj1mBo4dzOCZMs_InvPgYHwYBwvNdGcqAiReTLNvjEJb_gxQaOaRLRG0YVeqZ0sy2s3ma0Q"/>
+</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-sm font-medium text-text-muted hover:text-text-main transition-colors flex items-center gap-1" href="index.html">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Volver al Inicio</span>
+</a>
+<div class="h-4 w-px bg-surface-border"></div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-xs font-mono text-primary font-medium tracking-wide">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>MODO EXPOSICIÓN</span>
+</div>
+</div>
+</div>
+</header>
+<!-- BARRA DE TIEMPO DE EXPOSICIÓN (SUB-NAV SUBTLE) -->
+<aside class="fixed top-16 inset-x-0 z-40 bg-[#121216]/95 backdrop-blur border-b border-surface-border/40 py-2.5 px-6">
+<div class="max-w-6xl mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 shrink-0">
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-1">
+<span class="text-primary-container font-semibold">01</span> Origen <span class="text-text-faint text-[10px]">(0:45)</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-2">
+<span class="text-primary-container font-semibold">02</span> El Problema <span class="text-text-faint text-[10px]">(0:50)</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-3">
+<span class="text-primary-container font-semibold">03</span> Hardware <span class="text-text-faint text-[10px]">(1:30)</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-4">
+<span class="text-primary-container font-semibold">04</span> Colibrí IA <span class="text-text-faint text-[10px]">(1:40)</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono bg-primary-container text-black font-bold shadow-sm flex items-center gap-1.5 hover:bg-secondary transition-all" href="#bloque-5">
+<span>05</span> Demo <span class="opacity-75 text-[10px]">(3:00)</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-6">
+<span class="text-primary-container font-semibold">06</span> Costos <span class="text-primary text-[10px]">$1,778</span>
+</a>
+<a class="px-3 py-1 rounded-md text-xs font-mono text-text-muted hover:text-text-main hover:bg-surface-card transition-all flex items-center gap-1.5 border border-transparent hover:border-surface-border" href="#bloque-7">
+<span class="text-secondary font-semibold">07</span> Jurado Q&amp;A
+        </a>
+</div>
+<div class="hidden md:flex items-center gap-2 text-xs font-mono text-text-faint shrink-0">
+<span>CBTIS 149</span>
+<span>•</span>
+<span class="text-text-muted">TIEMPO TOTAL: 08:30 MIN</span>
+</div>
+</div>
+</aside>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="pt-36 pb-28 max-w-5xl mx-auto px-6 flex flex-col gap-28">
+<!-- BLOQUE 1: EL ORIGEN -->
+<section class="scroll-mt-36 flex flex-col gap-6 pt-4" id="bloque-1">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+        BLOQUE 01 • EL ORIGEN (0:45)
+      </div>
+<div class="relative">
+<h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] text-text-main">
+          “¿Por qué la tecnología que salva vidas debe estar reservada <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary">únicamente para vehículos de alta gama?</span>”
+        </h1>
+</div>
+<div class="p-6 rounded-2xl bg-surface-card/60 border border-surface-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+<p class="text-base sm:text-lg text-text-muted leading-relaxed font-light">
+          Monarca Drive nació tras presenciar un siniestro vial por fatiga en Michoacán. En las aulas del <strong class="text-text-main font-semibold">CBTis 149</strong> decidimos transformar algoritmos automotrices de lujo en un dispositivo accesible, soberano y de respuesta inmediata en milisegundos.
+        </p>
+<div class="shrink-0 px-4 py-3 rounded-xl bg-surface-subtle border border-surface-border/80 text-left">
+<span class="block text-[11px] font-mono text-text-faint uppercase">Objetivo Técnico</span>
+<span class="font-mono text-sm text-primary font-semibold">Latencia &lt; 1 seg • 100% Edge</span>
+</div>
+</div>
+</section>
+<!-- BLOQUE 2: EL PROBLEMA EN CIFRAS -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-2">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-secondary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          BLOQUE 02 • EL PROBLEMA (0:50)
+        </div>
+<span class="text-xs font-mono text-text-faint">PAUSA DE 2 SEG TRAS CADA CIFRA</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Num 1 -->
+<div class="p-8 rounded-2xl bg-surface-card border border-surface-border/70 flex flex-col justify-between gap-6 hover:border-primary/40 transition-colors">
+<span class="text-xs font-mono text-text-faint uppercase tracking-wider">Accidentes / Año (México)</span>
+<div>
+<div class="font-orbitron text-5xl lg:text-6xl font-extrabold text-text-main tracking-tight">378K</div>
+<p class="mt-3 text-sm text-text-muted leading-snug">El 80% están vinculados a distracciones, cabeceo y fatiga al volante.</p>
+</div>
+</div>
+<!-- Num 2 -->
+<div class="p-8 rounded-2xl bg-surface-card border border-surface-border/70 flex flex-col justify-between gap-6 hover:border-error-alert/40 transition-colors">
+<span class="text-xs font-mono text-text-faint uppercase tracking-wider">Fatalidades Anuales</span>
+<div>
+<div class="font-orbitron text-5xl lg:text-6xl font-extrabold text-error-alert tracking-tight">16,000</div>
+<p class="mt-3 text-sm text-text-muted leading-snug">Segunda causa de muerte nacional en jóvenes de 15 a 29 años.</p>
+</div>
+</div>
+<!-- Num 3 -->
+<div class="p-8 rounded-2xl bg-surface-card border border-surface-border/70 flex flex-col justify-between gap-6 hover:border-secondary/40 transition-colors">
+<span class="text-xs font-mono text-text-faint uppercase tracking-wider">Impacto Regional</span>
+<div>
+<div class="font-orbitron text-5xl lg:text-6xl font-extrabold text-secondary tracking-tight">TOP 5</div>
+<p class="mt-3 text-sm text-text-muted leading-snug">Michoacán registra alta siniestralidad en carreteras de transporte de carga pesada.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOQUE 3: PROTOTIPO 2 Y FUSIÓN SENSORIAL -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-3">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          BLOQUE 03 • HARDWARE Y FUSIÓN SENSORIAL (1:30)
+        </div>
+<span class="text-xs font-mono text-primary font-semibold">PROTOTIPO 2 • VERSIÓN DE CONCURSO</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left: Branding & Overview -->
+<div class="lg:col-span-4 p-8 rounded-2xl bg-surface-card border border-surface-border flex flex-col items-center text-center justify-center gap-6">
+<img alt="Monarca Drive Logo" class="h-28 w-auto object-contain filter invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRmrOwAFq_jCA46ZC2uInUMfPbSHupHjcnhldYQ6iWXcu7QDTUdPgJW1iq2HMaqAx5g05_eKdiwxOlQY9NV6wPUEvUgcl8dVwH4zVt7z9Q3W-jX-t3h4JrGOnRf5K2XU2IxYa8ZiMi_bk_9NEBoasiArOgJbaBQe0AwL47NZOd9-5Yc6qq5ZD2tILAXamQ9OlBimzBzZOc_5gJjfyb3pUB-IVekRh6mwnR3BBQrc-rkfos7Iqk9e0CNrqqHYDVTXZ5dQ"/>
+<div class="flex flex-col gap-1">
+<span class="font-display font-bold text-lg text-text-main">Monarca Drive V2</span>
+<span class="text-xs font-mono text-text-muted">Prototipo de Competencia Industrial</span>
+</div>
+<div class="w-full pt-4 border-t border-surface-border/60 flex justify-around text-xs font-mono">
+<div>
+<span class="block text-text-faint">Latencia</span>
+<span class="text-primary font-bold">~48 ms</span>
+</div>
+<div>
+<span class="block text-text-faint">Rendimiento</span>
+<span class="text-secondary font-bold">18-20 FPS</span>
+</div>
+</div>
+</div>
+<!-- Right: Real Specs comparison in clean minimalist cards -->
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/80 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-mono text-xs font-semibold uppercase">
+<span class="material-symbols-outlined text-base">memory</span>
+              Raspberry Pi 4 Quad-Core
+            </div>
+<p class="text-sm text-text-muted">Procesamiento de visión en borde a 18-20 FPS sostenidos con disipación activa de cobre.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/80 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-mono text-xs font-semibold uppercase">
+<span class="material-symbols-outlined text-base">videocam</span>
+              Visión Infrarroja (IR 850nm)
+            </div>
+<p class="text-sm text-text-muted">Operación continua día/noche sin destello visual perceptible para el conductor.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/80 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary font-mono text-xs font-semibold uppercase">
+<span class="material-symbols-outlined text-base">sensors</span>
+              Acelerómetro MPU-6050
+            </div>
+<p class="text-sm text-text-muted">Fusión inercial que detecta descolgamiento cervical y volantazos bruscos en milisegundos.</p>
+</div>
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/80 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-secondary font-mono text-xs font-semibold uppercase">
+<span class="material-symbols-outlined text-base">volume_up</span>
+              Alerta Acústica Dual (5W + 90dB)
+            </div>
+<p class="text-sm text-text-muted">Supera el umbral de ruido de cabinas de carga (75-85 dB) sin intervenir el estéreo.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOQUE 4: COLIBRÍ IA -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-4">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          BLOQUE 04 • COLIBRÍ IA — DIFERENCIADOR CLAVE (1:40)
+        </div>
+<span class="text-xs font-mono text-secondary">PROPIEDAD INTELECTUAL Y DATASET PROPIO</span>
+</div>
+<div class="p-8 rounded-2xl bg-surface-card border border-surface-border flex flex-col gap-8">
+<!-- Header with Colibrí Logo -->
+<div class="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 rounded-xl bg-surface-subtle border border-surface-border flex items-center justify-center p-2.5 shrink-0">
+<img alt="Colibrí IA Logo" class="w-full h-full object-contain filter invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBehf62o9cPDQU4FSZpalw-HuJLYR0qzgXPkBlUsPb3Zv6o66FoTaTsOUxZmiWn5JGydJSf0s3pjETj4KoD5boHYRr_ZhOC1Aish98-P1uIphbtBDU6ujPClyimjxAipEZitrDCfe2_STwZC1zh_zcpAH_GoyKGkXlgIYfGBHXWW5UZyvoXSEjL-Of15WX--pVt7JKwSHifEDlw-2Q1iGVrqT5B34KarDIv44XV0QW_mUD_lZwNml9VBsIgBgBZpRHHxA"/>
+</div>
+<div>
+<h2 class="font-display text-2xl sm:text-3xl font-bold text-text-main">Colibrí IA: Ensemble Dual</h2>
+<p class="text-sm text-text-muted font-mono mt-0.5">Arquitectura neuronal diseñada para cero sesgos</p>
+</div>
+</div>
+<div class="px-4 py-2 rounded-xl bg-surface-subtle border border-surface-border text-center sm:text-right">
+<span class="text-xs font-mono text-text-faint block">Dataset de Entrenamiento</span>
+<span class="font-orbitron text-xl text-primary font-bold">4,000 FOTOS</span>
+</div>
+</div>
+<!-- 3 Core Points Explained Directly -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<!-- Point 1 -->
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/60 flex flex-col gap-2">
+<span class="text-xs font-mono text-text-faint uppercase tracking-wider">01. Dataset Curado</span>
+<p class="font-semibold text-text-main text-base">4,000 imágenes recolectadas</p>
+<p class="text-sm text-text-muted">Compilación propia y balanceada para condiciones reales de luz y ángulos de cabina.</p>
+</div>
+<!-- Point 2 -->
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/60 flex flex-col gap-2">
+<span class="text-xs font-mono text-secondary uppercase tracking-wider">02. Sesgo Mitigado</span>
+<p class="font-semibold text-text-main text-base">Corrección de lentes graduados</p>
+<p class="text-sm text-text-muted">Se eliminó el falso positivo que confundía monturas de anteojos con expresiones de cansancio.</p>
+</div>
+<!-- Point 3 -->
+<div class="p-5 rounded-xl bg-surface-subtle border border-surface-border/60 flex flex-col gap-2">
+<span class="text-xs font-mono text-primary uppercase tracking-wider">03. Precisión Probada</span>
+<div class="flex items-baseline gap-2">
+<span class="text-sm text-text-faint line-through">62%</span>
+<span class="font-orbitron text-2xl text-primary-container font-extrabold">&gt;95%</span>
+</div>
+<p class="text-sm text-text-muted">Salto cualitativo al separar la evaluación en dos redes: Ocular (EAR) + Bucal (MAR).</p>
+</div>
+</div>
+<!-- Bottom Note -->
+<div class="p-4 rounded-xl bg-surface-subtle/80 border border-surface-border text-xs text-text-muted flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg shrink-0">verified</span>
+<span>MediaPipe solo calcula la malla (landmarks). Todo el modelo de decisión y clasificación es autoría original de Monarca Technologies.</span>
+</div>
+</div>
+</section>
+<!-- BLOQUE 5: SIMULADOR INTERACTIVO SIMPLE -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-5">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          BLOQUE 05 • DEMOSTRACIÓN EN VIVO (3:00)
+        </div>
+<span class="text-xs font-mono text-text-faint">BANCO DE PRUEBAS INTERACTIVO</span>
+</div>
+<!-- HUD Minimalista -->
+<div class="rounded-2xl bg-surface-card border border-surface-border overflow-hidden p-6 lg:p-8 flex flex-col gap-6">
+<!-- Pantalla HUD simulada -->
+<div class="w-full rounded-xl bg-[#09090b] border border-surface-border p-6 relative overflow-hidden flex flex-col justify-between min-h-[260px]">
+<!-- Top HUD Data -->
+<div class="flex flex-wrap items-center justify-between gap-4 text-xs font-mono pb-4 border-b border-surface-border/40">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" id="hud-pulse"></span>
+<span class="text-text-muted">CAM_01_IR</span>
+<span class="text-text-faint">|</span>
+<span class="text-text-main font-semibold" id="hud-mode-title">MODO MONITOREO ACTIVO</span>
+</div>
+<div class="flex items-center gap-4 text-text-faint">
+<span>FPS: <strong class="text-text-main font-semibold" id="hud-fps">18.4</strong></span>
+<span>LATENCIA: <strong class="text-text-main font-semibold" id="hud-lat">42ms</strong></span>
+</div>
+</div>
+<!-- Central Alert & Visual Target -->
+<div class="my-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-2xl bg-surface-card border border-surface-border flex items-center justify-center transition-colors" id="state-icon-box">
+<span class="material-symbols-outlined text-3xl text-emerald-400" id="state-icon">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-mono text-text-faint uppercase" id="state-label">Lectura de Sensores</span>
+<span class="font-display text-2xl font-bold text-text-main" id="state-main-text">Conductor Alerta (Nominal)</span>
+<span class="text-xs font-mono text-text-muted mt-0.5" id="state-sub-text">Frecuencia de parpadeo y postura de cabeza estables</span>
+</div>
+</div>
+<!-- Virtual Face Box / Landmark summary -->
+<div class="px-5 py-3 rounded-xl bg-[#111115] border border-surface-border flex gap-6 text-center font-mono">
+<div>
+<span class="block text-[10px] text-text-faint">EAR (OJOS)</span>
+<span class="text-base font-bold text-text-main" id="ear-val">0.32</span>
+</div>
+<div class="w-px bg-surface-border"></div>
+<div>
+<span class="block text-[10px] text-text-faint">MAR (BOCA)</span>
+<span class="text-base font-bold text-text-main" id="mar-val">0.18</span>
+</div>
+<div class="w-px bg-surface-border"></div>
+<div>
+<span class="block text-[10px] text-text-faint">MPU (G)</span>
+<span class="text-base font-bold text-text-main" id="mpu-val">1.02G</span>
+</div>
+</div>
+</div>
+<!-- Audio / Reaction Status Bottom -->
+<div class="pt-3 border-t border-surface-border/40 flex items-center justify-between text-xs font-mono text-text-muted">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">volume_up</span>
+<span>Audio: <strong class="text-text-main" id="audio-indicator">Silencioso (Standby)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">screen_rotation</span>
+<span>Vector Inercial: <strong class="text-text-main" id="vector-indicator">Estable (Δ 0.02)</strong></span>
+</div>
+</div>
+</div>
+<!-- 4 Clear Interactive Buttons -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+<button class="p-4 rounded-xl bg-surface-subtle border border-surface-border hover:border-text-main text-left transition-all group flex flex-col justify-between gap-3" onclick="setSimState('normal')">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-emerald-400 font-semibold">01</span>
+<span class="material-symbols-outlined text-sm text-text-faint group-hover:text-text-main">play_arrow</span>
+</div>
+<div>
+<span class="block text-sm font-semibold text-text-main">Alerta Normal</span>
+<span class="text-[11px] text-text-muted">Estado óptimo de manejo</span>
+</div>
+</button>
+<button class="p-4 rounded-xl bg-surface-subtle border border-surface-border hover:border-secondary text-left transition-all group flex flex-col justify-between gap-3" onclick="setSimState('yawn')">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-secondary font-semibold">02</span>
+<span class="material-symbols-outlined text-sm text-text-faint group-hover:text-secondary">warning</span>
+</div>
+<div>
+<span class="block text-sm font-semibold text-secondary">Simular Bostezo</span>
+<span class="text-[11px] text-text-muted">MAR &gt; 0.70 (&gt;1.2 seg)</span>
+</div>
+</button>
+<button class="p-4 rounded-xl bg-surface-subtle border border-surface-border hover:border-error-alert text-left transition-all group flex flex-col justify-between gap-3" onclick="setSimState('microsleep')">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-error-alert font-semibold">03</span>
+<span class="material-symbols-outlined text-sm text-text-faint group-hover:text-error-alert">crisis_alert</span>
+</div>
+<div>
+<span class="block text-sm font-semibold text-error-alert">Cierre Ocular</span>
+<span class="text-[11px] text-text-muted">EAR &lt; 0.10 por 2.0 seg</span>
+</div>
+</button>
+<button class="p-4 rounded-xl bg-surface-subtle border border-surface-border hover:border-primary-container text-left transition-all group flex flex-col justify-between gap-3" onclick="setSimState('swerve')">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-primary-container font-semibold">04</span>
+<span class="material-symbols-outlined text-sm text-text-faint group-hover:text-primary-container">sync_problem</span>
+</div>
+<div>
+<span class="block text-sm font-semibold text-primary-container">Volantazo MPU</span>
+<span class="text-[11px] text-text-muted">Pico inercial &gt; 2.4G</span>
+</div>
+</button>
+</div>
+</div>
+</section>
+<!-- BLOQUE 6: COSTO REAL ($1,778 MXN) -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-6">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-primary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+          BLOQUE 06 • COSTO REAL Y VIABILIDAD
+        </div>
+<span class="text-xs font-mono text-primary font-semibold">COTIZACIÓN VALIDADA EN MÉXICO</span>
+</div>
+<div class="p-8 rounded-2xl bg-surface-card border border-surface-border flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Cost Headline Left -->
+<div class="flex flex-col gap-3 max-w-sm">
+<span class="text-xs font-mono text-text-faint uppercase tracking-wider">Costo Total del Prototipo</span>
+<div class="font-orbitron text-5xl sm:text-6xl font-black text-primary-container tracking-tight">$1,778 <span class="text-2xl font-normal text-text-muted">MXN</span></div>
+<p class="text-sm text-text-muted leading-relaxed">
+            Frente a los sistemas ADAS comerciales que superan los $2,500 USD, Monarca Drive reduce un 95% el costo de acceso a seguridad activa.
+          </p>
+<div class="mt-2 text-xs font-mono text-text-faint">
+            Proyección a escala (500 piezas): <strong class="text-secondary">$1,190 MXN / ud</strong>
+</div>
+</div>
+<!-- 5 Main Components Clean Breakdown -->
+<div class="w-full lg:max-w-md flex flex-col gap-2.5">
+<div class="p-3 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-between font-mono text-xs">
+<span class="text-text-main font-semibold">1. Raspberry Pi 4 Model B</span>
+<span class="text-primary font-bold">$1,108 MXN</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-between font-mono text-xs">
+<span class="text-text-main font-semibold">2. Módulo Cámara Visión IR</span>
+<span class="text-primary font-bold">$220 MXN</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-between font-mono text-xs">
+<span class="text-text-main font-semibold">3. Acelerómetro MPU-6050 + OLED</span>
+<span class="text-primary font-bold">$150 MXN</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-between font-mono text-xs">
+<span class="text-text-main font-semibold">4. Audio Dual (Bocina 5W + Buzzer)</span>
+<span class="text-primary font-bold">$120 MXN</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-subtle border border-surface-border/60 flex items-center justify-between font-mono text-xs">
+<span class="text-text-main font-semibold">5. Chasis + Disipación de Cobre</span>
+<span class="text-primary font-bold">$180 MXN</span>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOQUE 7: PREGUNTAS CLAVE DEL JURADO -->
+<section class="scroll-mt-36 flex flex-col gap-8" id="bloque-7">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-3">
+<div class="flex items-center gap-2 text-xs font-mono tracking-widest text-secondary uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          BLOQUE 07 • PREGUNTAS CRÍTICAS DEL JURADO
+        </div>
+<span class="text-xs font-mono text-text-faint">RESPUESTAS ENSAYADAS Y ARGUMENTACIÓN TÉCNICA</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Q1 -->
+<details class="group rounded-xl bg-surface-card border border-surface-border p-5 transition-colors open:border-primary/50">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-display font-semibold text-text-main text-base flex items-center gap-3">
+<span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-subtle text-primary border border-surface-border">P1</span>
+              ¿Qué ocurre si el conductor lleva lentes de sol polarizados?
+            </span>
+<span class="material-symbols-outlined text-text-faint group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-border text-sm text-text-muted leading-relaxed flex flex-col gap-2">
+<p>
+              La luz infrarroja de 850 nm atraviesa la mayoría de los lentes de sol oscuros. Si el tinte bloquea por completo el espectro, entra en acción la <strong class="text-text-main">fusión sensorial</strong>: la red bucal monitorea bostezos (MAR) y el sensor MPU-6050 detecta cabeceos bruscos o microdesplazamientos cervicales.
+            </p>
+</div>
+</details>
+<!-- Q2 -->
+<details class="group rounded-xl bg-surface-card border border-surface-border p-5 transition-colors open:border-primary/50">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-display font-semibold text-text-main text-base flex items-center gap-3">
+<span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-subtle text-primary border border-surface-border">P2</span>
+              ¿Por qué no usar solo librerías estándar como Haar Cascades o Dlib?
+            </span>
+<span class="material-symbols-outlined text-text-faint group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-border text-sm text-text-muted leading-relaxed flex flex-col gap-2">
+<p>
+              Haar Cascades falla sistemáticamente con giros leves de cabeza o vibración de cabina. Dlib consume hasta el 80% de CPU en microprocesadores ARM, reduciendo la fluidez a menos de 6 FPS. <strong class="text-text-main">Colibrí IA</strong> optimiza descriptores matemáticos y cuantización int8 para mantener 18-20 FPS estables con bajo consumo térmico.
+            </p>
+</div>
+</details>
+<!-- Q3 -->
+<details class="group rounded-xl bg-surface-card border border-surface-border p-5 transition-colors open:border-primary/50">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-display font-semibold text-text-main text-base flex items-center gap-3">
+<span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-subtle text-primary border border-surface-border">P3</span>
+              ¿Por qué integrar una bocina de 5W y no solo un buzzer común?
+            </span>
+<span class="material-symbols-outlined text-text-faint group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-border text-sm text-text-muted leading-relaxed flex flex-col gap-2">
+<p>
+              En pruebas reales, la cabina de un camión genera de 75 a 85 dB de ruido acústico por el motor diésel y la fricción de neumáticos. Un buzzer piezoeléctrico de 5V queda inaudible; la bocina de 5W amplificada emite una alerta psicoacústica penetrante que asegura el despertar del conductor sin alterar el sistema de audio original.
+            </p>
+</div>
+</details>
+<!-- Q4 -->
+<details class="group rounded-xl bg-surface-card border border-surface-border p-5 transition-colors open:border-primary/50">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-display font-semibold text-text-main text-base flex items-center gap-3">
+<span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-subtle text-primary border border-surface-border">P4</span>
+              ¿Cuál es la velocidad de respuesta en milisegundos?
+            </span>
+<span class="material-symbols-outlined text-text-faint group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-border text-sm text-text-muted leading-relaxed flex flex-col gap-2">
+<p>
+              El ciclo completo de inferencia y decisión toma <strong class="text-text-main">48 milisegundos</strong> en borde. Si se detecta un patrón crítico confirmado (ojos cerrados &gt;1.5s o caída de cabeza &gt;18°), la señal de alarma acústica se detona en menos de 200 ms sin depender de ninguna conexión a internet o nube externa.
+            </p>
+</div>
+</details>
+</div>
+</section>
+</main>
+<!-- FOOTER MINIMALISTA -->
+<footer class="w-full border-t border-surface-border/50 py-10 bg-[#0a0a0d]">
+<div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-text-faint">
+<div class="flex items-center gap-2">
+<img alt="Monarca Technologies" class="h-4 w-auto object-contain filter invert opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEQimIOZWxq2X2U9nMUv2olOQy0I24gebhs2ULKW8dGXVxQfDykrq3gkId7fVcDYP-raYJgm67cP-EMeOHnIrdsixUUd3DbvqwU3H7sVyeIFFS07c99Sq6SJcp-9IjCoC26CAiKPj1vCl7TU_6OGQTCJK6mO_giOgPUj4cwrkXxHIpxI_BciRG6rWDACG-KJSyWjEIpwf7aIyMWHj2sqeq24ElYlmS7lnyb5WhTxU-Np9t1B8VNQcjVgQu1Q2CdHee2Q"/>
+<span>• CBTis 149 Morelia, Michoacán</span>
+</div>
+<div>
+<span>PROYECTO DE INNOVACIÓN TECNOLÓGICA AUTOMOTRIZ</span>
+</div>
+</div>
+</footer>
+<!-- SCRIPT PARA EL SIMULADOR INTERACTIVO -->
+<script>
+    function setSimState(mode) {
+      const stateBox = document.getElementById('state-icon-box');
+      const stateIcon = document.getElementById('state-icon');
+      const stateTitle = document.getElementById('state-main-text');
+      const stateSub = document.getElementById('state-sub-text');
+      const earVal = document.getElementById('ear-val');
+      const marVal = document.getElementById('mar-val');
+      const mpuVal = document.getElementById('mpu-val');
+      const audioInd = document.getElementById('audio-indicator');
+      const vectorInd = document.getElementById('vector-indicator');
+      const pulse = document.getElementById('hud-pulse');
+      const modeTitle = document.getElementById('hud-mode-title');
+
+      if (mode === 'normal') {
+        stateBox.className = 'w-16 h-16 rounded-2xl bg-surface-card border border-surface-border flex items-center justify-center transition-colors';
+        stateIcon.className = 'material-symbols-outlined text-3xl text-emerald-400';
+        stateIcon.innerText = 'check_circle';
+        stateTitle.innerText = 'Conductor Alerta (Nominal)';
+        stateTitle.className = 'font-display text-2xl font-bold text-text-main';
+        stateSub.innerText = 'Frecuencia de parpadeo y postura de cabeza estables';
+        earVal.innerText = '0.32';
+        earVal.className = 'text-base font-bold text-text-main';
+        marVal.innerText = '0.18';
+        marVal.className = 'text-base font-bold text-text-main';
+        mpuVal.innerText = '1.02G';
+        mpuVal.className = 'text-base font-bold text-text-main';
+        audioInd.innerText = 'Silencioso (Standby)';
+        audioInd.className = 'text-text-main';
+        vectorInd.innerText = 'Estable (Δ 0.02)';
+        pulse.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+        modeTitle.innerText = 'MODO MONITOREO ACTIVO';
+      } else if (mode === 'yawn') {
+        stateBox.className = 'w-16 h-16 rounded-2xl bg-secondary/10 border border-secondary/40 flex items-center justify-center transition-colors';
+        stateIcon.className = 'material-symbols-outlined text-3xl text-secondary';
+        stateIcon.innerText = 'warning';
+        stateTitle.innerText = 'Fatiga Detectada: Bostezo';
+        stateTitle.className = 'font-display text-2xl font-bold text-secondary';
+        stateSub.innerText = 'Apertura de boca prolongada (MAR elevado >1.2 seg)';
+        earVal.innerText = '0.29';
+        earVal.className = 'text-base font-bold text-text-main';
+        marVal.innerText = '0.74';
+        marVal.className = 'text-base font-bold text-secondary';
+        mpuVal.innerText = '1.04G';
+        mpuVal.className = 'text-base font-bold text-text-main';
+        audioInd.innerText = 'Aviso Acústico Nivel 1';
+        audioInd.className = 'text-secondary font-bold';
+        vectorInd.innerText = 'Leve inclinación (Δ 0.08)';
+        pulse.className = 'w-2 h-2 rounded-full bg-secondary animate-ping';
+        modeTitle.innerText = 'PRE-ALERTA COLIBRÍ IA';
+      } else if (mode === 'microsleep') {
+        stateBox.className = 'w-16 h-16 rounded-2xl bg-error-alert/20 border border-error-alert flex items-center justify-center transition-colors shadow-[0_0_20px_rgba(255,107,107,0.3)]';
+        stateIcon.className = 'material-symbols-outlined text-3xl text-error-alert';
+        stateIcon.innerText = 'emergency';
+        stateTitle.innerText = '¡MICROSUEÑO INMINENTE!';
+        stateTitle.className = 'font-display text-2xl font-bold text-error-alert';
+        stateSub.innerText = 'Ojos cerrados por más de 1.8 segundos';
+        earVal.innerText = '0.08';
+        earVal.className = 'text-base font-bold text-error-alert';
+        marVal.innerText = '0.14';
+        marVal.className = 'text-base font-bold text-text-main';
+        mpuVal.innerText = '1.18G';
+        mpuVal.className = 'text-base font-bold text-text-main';
+        audioInd.innerText = 'SIRENA DUAL ACTIVA (90dB + 5W)';
+        audioInd.className = 'text-error-alert font-extrabold';
+        vectorInd.innerText = 'Cabeceo Detectado (Δ 0.22)';
+        pulse.className = 'w-2 h-2 rounded-full bg-error-alert animate-ping';
+        modeTitle.innerText = '¡ALARMA CRÍTICA DE SEGURIDAD!';
+      } else if (mode === 'swerve') {
+        stateBox.className = 'w-16 h-16 rounded-2xl bg-primary-container/20 border border-primary-container flex items-center justify-center transition-colors';
+        stateIcon.className = 'material-symbols-outlined text-3xl text-primary-container';
+        stateIcon.innerText = 'sync_problem';
+        stateTitle.innerText = 'Fusión MPU: Volantazo / Inercia';
+        stateTitle.className = 'font-display text-2xl font-bold text-primary-container';
+        stateSub.innerText = 'Desaceleración o desvío súbito en vector inercial';
+        earVal.innerText = '0.24';
+        earVal.className = 'text-base font-bold text-text-main';
+        marVal.innerText = '0.35';
+        marVal.className = 'text-base font-bold text-text-main';
+        mpuVal.innerText = '2.45G';
+        mpuVal.className = 'text-base font-bold text-primary-container';
+        audioInd.innerText = 'Tono de Precaución Dinámico';
+        audioInd.className = 'text-primary-container font-bold';
+        vectorInd.innerText = 'Giro Brusco (Δ 0.45 rad/s)';
+        pulse.className = 'w-2 h-2 rounded-full bg-primary-container animate-pulse';
+        modeTitle.innerText = 'DESVÍO DINÁMICO CORREGIDO';
+      }
+    }
+  </script>
+</body></html>
