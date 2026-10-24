@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Colibrí IA — Ecosistema de modelos de inteligencia artificial | Monarca Technologies</title>
+<meta name="description" content="Colibrí IA: ecosistema de modelos de inteligencia artificial de visión artificial y asistencia educativa, hecho en Michoacán."/>
+<link rel="icon" type="image/png" href="img/icono-ci-dark.png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Orbitron:wght@600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+if (typeof tailwind !== "undefined") {
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter","sans-serif"], heading: ["Space Grotesk","sans-serif"], tech: ["Orbitron","sans-serif"] } } } };
+}
+</script>
+
+<style>
+:root{--blue:#2563eb;--sky:#60a5fa;--cyan:#22d3ee;--navy:#0a1330}
+body{background:#f7f9fc;color:#0f172a;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#2563eb;color:#fff}
+.tag{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:1.25rem;transition:box-shadow .3s,transform .3s,border-color .3s}
+.card:hover{box-shadow:0 18px 40px rgba(37,99,235,.12);transform:translateY(-4px);border-color:#bfdbfe}
+.hero{background:radial-gradient(60% 80% at 80% 20%,rgba(37,99,235,.55),transparent 60%),radial-gradient(40% 60% at 10% 90%,rgba(34,211,238,.25),transparent 60%),#0a1330;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(70% 70% at 70% 40%,#000,transparent)}
+.float{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-14px)}}
+.glow{filter:drop-shadow(0 0 40px rgba(96,165,250,.7))}
+.grad{background:linear-gradient(90deg,#60a5fa,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.spec dt{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#64748b}
+.spec dd{margin:.15rem 0 1rem;font-size:.95rem}
+.bar{height:6px;border-radius:9999px;background:#e2e8f0;overflow:hidden}.bar i{display:block;height:100%;border-radius:9999px;background:linear-gradient(90deg,#2563eb,#22d3ee)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+.pulse{animation:pl 2s infinite}@keyframes pl{50%{opacity:.35}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-50 bg-[#f7f9fc]/85 backdrop-blur-lg border-b border-slate-200">
+<div class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
+<a class="flex items-center gap-3" href="index.html"><img alt="Colibrí IA" class="h-12 w-auto object-contain" src="img/logo-ci-dark.png"/></a>
+<nav class="hidden md:flex items-center gap-7 text-sm font-heading font-medium text-slate-500">
+<a class="hover:text-[#2563eb]" href="#origen">Origen</a><a class="hover:text-[#2563eb]" href="#vision">Visión Artificial</a><a class="hover:text-[#2563eb]" href="#educativos">Modelos educativos</a><a class="hover:text-[#2563eb]" href="#uichu">Uichu Go!</a>
+</nav>
+<a class="text-sm font-heading font-semibold px-5 py-2.5 rounded-full bg-[#0a1330] text-white hover:bg-[#2563eb] transition-colors" href="index.html">← Monarca Technologies</a>
+</div>
+</header>
+
+<main>
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pt-6">
+<div class="hero rounded-[2rem] px-8 sm:px-16 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 relative z-10 text-white">
+<p class="tag text-[#60a5fa] mb-6">Un producto de Monarca Technologies</p>
+<h1 class="font-heading font-bold tracking-tight leading-[1.02] text-5xl sm:text-7xl">Inteligencia artificial <span class="grad">hecha en Michoacán.</span></h1>
+<p class="mt-8 text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-xl">Colibrí IA es un ecosistema de múltiples modelos de inteligencia artificial pensados para diferentes aplicaciones.</p>
+<div class="mt-10 flex flex-wrap gap-4">
+<a class="font-heading font-semibold text-sm px-7 py-3.5 rounded-full bg-[#2563eb] hover:bg-[#3b82f6] transition-colors" href="#educativos">Conoce los modelos</a>
+<a class="font-heading font-semibold text-sm px-7 py-3.5 rounded-full border border-white/25 hover:border-white transition-colors" href="#vision">Visión Artificial</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative z-10 flex justify-center"><img alt="Colibrí IA" class="float glow w-56 sm:w-80 object-contain" src="img/icono-ci-light.png"/></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+<div class="card px-6 py-5"><p class="font-tech text-2xl font-bold text-[#2563eb]">4</p><p class="text-xs text-slate-500 mt-1">modelos en el ecosistema</p></div>
+<div class="card px-6 py-5"><p class="font-tech text-2xl font-bold text-[#2563eb]">4,000</p><p class="text-xs text-slate-500 mt-1">imágenes de dataset propio</p></div>
+<div class="card px-6 py-5"><p class="font-tech text-2xl font-bold text-[#2563eb]">97.8%</p><p class="text-xs text-slate-500 mt-1">exactitud en ojos</p></div>
+<div class="card px-6 py-5"><p class="font-tech text-2xl font-bold text-[#2563eb]">Offline</p><p class="text-xs text-slate-500 mt-1">funciona sin internet</p></div>
+</div>
+</section>
+
+<section id="origen" class="rv max-w-6xl mx-auto px-6 py-24">
+<div class="grid lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5"><p class="tag text-[#2563eb] mb-4">Origen</p><h2 class="font-heading font-bold text-3xl sm:text-5xl tracking-tight leading-tight">Del primer modelo de visión a un ecosistema.</h2></div>
+<div class="lg:col-span-7 space-y-6 text-lg text-slate-600 font-light leading-relaxed">
+<p>Colibrí IA es un ecosistema de múltiples modelos de inteligencia artificial pensados para diferentes aplicaciones. Su origen se dio gracias al primer modelo de visión artificial, desarrollado para detectar el cansancio de las personas al volante dentro de Monarca Drive.</p>
+<p>Posteriormente evolucionó hacia una variante de asistencia educativa: modelos de lenguaje de distintos tamaños, diseñados para funcionar desde una computadora con GPU hasta una Raspberry Pi Zero 2W, de modo que la inteligencia artificial llegue también a escuelas con equipos limitados.</p>
+</div></div>
+<div class="mt-14 grid md:grid-cols-3 gap-4">
+<div class="card p-7"><p class="tag text-[#2563eb]">Paso 01</p><p class="mt-3 font-heading font-semibold text-xl">Visión Artificial</p><p class="mt-2 text-sm text-slate-500">El primer modelo: detecta cansancio con ojos y boca.</p></div>
+<div class="card p-7"><p class="tag text-[#2563eb]">Paso 02</p><p class="mt-3 font-heading font-semibold text-xl">Ecosistema</p><p class="mt-2 text-sm text-slate-500">Varios modelos para distintas aplicaciones y equipos.</p></div>
+<div class="card p-7"><p class="tag text-[#2563eb]">Paso 03</p><p class="mt-3 font-heading font-semibold text-xl">Asistencia educativa</p><p class="mt-2 text-sm text-slate-500">Colibrí IA, Atthis y Papalotl para el aprendizaje.</p></div>
+</div>
+</section>
+
+<section id="vision" class="rv bg-[#0a1330] text-white">
+<div class="max-w-6xl mx-auto px-6 py-24">
+<p class="tag text-[#60a5fa] mb-4">Modelo 01 · Visión Artificial</p>
+<h2 class="font-heading font-bold text-3xl sm:text-5xl tracking-tight max-w-3xl">Colibrí IA <span class="grad">Visión Artificial</span></h2>
+<p class="mt-6 text-lg text-slate-300 font-light leading-relaxed max-w-3xl">Modelo de visión artificial entrenado con 4,000 imágenes de un dataset propio. Usa Ensemble Learning, con una red para los ojos y otra para la boca, para lograr una detección más precisa y con sesgos mitigados: 97.8% de exactitud en ojos y 95.0% en boca para cada modelo.</p>
+<div class="mt-12 grid sm:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-7"><p class="font-tech text-4xl font-bold">4,000</p><p class="mt-2 text-sm text-slate-400">imágenes en un dataset propio</p></div>
+<div class="rounded-2xl border border-[#2563eb]/40 bg-[#2563eb]/15 p-7"><p class="font-tech text-4xl font-bold text-[#60a5fa]">97.8%</p><p class="mt-2 text-sm text-slate-300">exactitud del modelo de ojos</p></div>
+<div class="rounded-2xl border border-[#2563eb]/40 bg-[#2563eb]/15 p-7"><p class="font-tech text-4xl font-bold text-[#60a5fa]">95.0%</p><p class="mt-2 text-sm text-slate-300">exactitud del modelo de boca</p></div>
+</div>
+<div class="mt-10 flex flex-wrap items-center gap-3 text-xs font-tech tracking-[0.12em] uppercase text-slate-300">
+<span class="px-4 py-2 rounded-full border border-white/20">Cámara IR</span><span>→</span><span class="px-4 py-2 rounded-full border border-white/20">MediaPipe</span><span>→</span><span class="px-4 py-2 rounded-full bg-[#2563eb]">CNN Ojos + CNN Boca</span><span>→</span><span class="px-4 py-2 rounded-full border border-white/20">Alerta</span>
+</div>
+<p class="mt-5 text-xs text-slate-400">Resultados de validación sobre el dataset propio (400 imágenes por modelo).</p>
+<a class="inline-block mt-8 font-heading font-semibold text-sm underline decoration-[#60a5fa] underline-offset-4 hover:text-[#60a5fa]" href="monarcadrive.html">Míralo en acción dentro de Monarca Drive →</a>
+</div>
+</section>
+
+<section id="educativos" class="rv max-w-6xl mx-auto px-6 py-24">
+<p class="tag text-[#2563eb] mb-4">Modelos 02 a 04 · Asistencia educativa</p>
+<h2 class="font-heading font-bold text-3xl sm:text-5xl tracking-tight max-w-3xl">Modelos de asistencia educativa de inteligencia artificial</h2>
+<p class="mt-6 text-lg text-slate-600 font-light max-w-3xl">Tres versiones, de la más capaz a la más ligera, para que cada escuela use el modelo que su equipo puede ejecutar.</p>
+<div class="mt-12 grid lg:grid-cols-3 gap-6">
+<article class="card p-8">
+<p class="tag text-[#2563eb]">Potente</p><h3 class="mt-3 font-heading font-bold text-2xl tracking-tight">Colibrí IA</h3>
+<div class="bar mt-5"><i style="width:100%"></i></div>
+<dl class="spec mt-6"><dt>Modelo base</dt><dd>Qwen2.5:7B</dd><dt>Hardware recomendado</dt><dd>PC con GPU (RTX 3050 6 GB o superior) y 16 GB de RAM</dd></dl>
+<p class="text-slate-600 font-light leading-relaxed">Es la versión principal y la más capaz. Ofrece respuestas más inteligentes, coherentes y detalladas. Ideal para el uso diario, las explicaciones profundas y el apoyo educativo de buena calidad cuando se cuenta con una computadora decente. Aprovecha al máximo el RAG completo con documentos educativos.</p>
+</article>
+<article class="card p-8">
+<p class="tag text-[#2563eb]">Ligero / Intermedio</p><h3 class="mt-3 font-heading font-bold text-2xl tracking-tight">Colibrí IA Atthis</h3>
+<div class="bar mt-5"><i style="width:60%"></i></div>
+<dl class="spec mt-6"><dt>Modelo base</dt><dd>Llama 3.2:3B</dd><dt>Hardware recomendado</dt><dd>PCs modestas (Pentium, Celeron, laptops antiguas) con 8 GB de RAM</dd></dl>
+<p class="text-slate-600 font-light leading-relaxed">Versión equilibrada pensada para escuelas con equipos limitados. Es más rápida y consume menos recursos que la versión completa, y mantiene una calidad aceptable para explicaciones educativas, tareas escolares y consultas básicas. Un buen equilibrio entre rendimiento y capacidad.</p>
+</article>
+<article class="card p-8">
+<p class="tag text-[#2563eb]">Ultra ligero</p><h3 class="mt-3 font-heading font-bold text-2xl tracking-tight">Colibrí IA Papalotl</h3>
+<div class="bar mt-5"><i style="width:25%"></i></div>
+<dl class="spec mt-6"><dt>Modelo base</dt><dd>SmolLM2:135M</dd><dt>Hardware recomendado</dt><dd>Raspberry Pi Zero 2W (512 MB de RAM)</dd></dl>
+<p class="text-slate-600 font-light leading-relaxed">La versión más pequeña y ligera del ecosistema, diseñada para dispositivos muy limitados. Sus respuestas son simples y básicas, pero permite tener un asistente educativo completamente sin conexión en un prototipo pequeño y económico. Ideal para el dispositivo portátil destinado a escuelas rurales.</p>
+</article>
+</div>
+<p class="mt-4 text-xs text-slate-400">La barra indica la capacidad relativa de cada modelo.</p>
+<div class="mt-12 overflow-x-auto card">
+<table class="w-full text-sm text-left">
+<thead class="bg-slate-50 text-slate-500 font-tech text-[10px] tracking-[0.15em] uppercase"><tr><th class="px-6 py-4">Modelo</th><th class="px-6 py-4">Base</th><th class="px-6 py-4">Nivel</th><th class="px-6 py-4">Hardware</th></tr></thead>
+<tbody class="divide-y divide-slate-100">
+<tr><td class="px-6 py-4 font-heading font-semibold">Colibrí IA</td><td class="px-6 py-4">Qwen2.5:7B</td><td class="px-6 py-4">Potente</td><td class="px-6 py-4">GPU RTX 3050 6 GB + 16 GB RAM</td></tr>
+<tr><td class="px-6 py-4 font-heading font-semibold">Atthis</td><td class="px-6 py-4">Llama 3.2:3B</td><td class="px-6 py-4">Ligero / Intermedio</td><td class="px-6 py-4">PC modesta, 8 GB RAM</td></tr>
+<tr><td class="px-6 py-4 font-heading font-semibold">Papalotl</td><td class="px-6 py-4">SmolLM2:135M</td><td class="px-6 py-4">Ultra ligero</td><td class="px-6 py-4">Raspberry Pi Zero 2W, 512 MB</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="uichu" class="rv max-w-6xl mx-auto px-4 sm:px-6 pb-24">
+<div class="hero rounded-[2rem] px-8 sm:px-16 py-16 sm:py-20 text-white">
+<div class="relative z-10 max-w-3xl">
+<p class="tag text-[#22d3ee] mb-4 flex items-center gap-2"><span class="pulse w-2 h-2 rounded-full bg-[#22d3ee] inline-block"></span>En desarrollo · Diciembre 2026 (tentativo)</p>
+<h2 class="font-heading font-bold text-4xl sm:text-6xl tracking-tight">Uichu <span class="grad">Go!</span></h2>
+<p class="mt-8 text-lg sm:text-xl text-slate-300 font-light leading-relaxed">Prototipo que integra una Raspberry Pi Zero 2W y una pantalla táctil como dispositivo de aprendizaje con juegos. Su función principal usa el modelo Colibrí IA Papalotl como asistente didáctico para niñas, niños y adolescentes de escuelas rurales en México, con la finalidad de mitigar el rezago educativo y de información en el país.</p>
+</div></div>
+</section>
+<section class="max-w-6xl mx-auto px-6 pb-24 text-center"><h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-tight">¿Quieres llevar Colibrí IA a tu escuela?</h2><p class="mt-4 text-slate-600 font-light">Cuéntanos tu idea o tu necesidad y platicamos.</p><a class="inline-block mt-8 font-heading font-semibold text-sm px-8 py-3.5 rounded-full bg-[#2563eb] text-white hover:bg-[#1d4ed8] transition-colors" href="mailto:victor.garcia.engeneering@gmail.com?subject=Colibr%C3%AD%20IA">Escríbenos</a></section>
+</main>
+
+<footer class="border-t border-slate-200">
+<div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-5">
+<div class="flex items-center gap-7">
+<a href="index.html"><img alt="Monarca Technologies" class="h-9 w-auto object-contain" src="img/logo-mt-dark.png"/></a>
+<a href="monarcadrive.html"><img alt="Monarca Drive" class="h-11 w-auto object-contain" src="img/logo-md-dark.png"/></a>
+<img alt="Colibrí IA" class="h-11 w-auto object-contain" src="img/icono-ci-dark.png"/>
+</div>
+<p class="text-xs text-slate-500">© 2026 Monarca Technologies · Morelia, Michoacán, México</p>
+</div>
+</footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Monarca Technologies: empresa tecnológica michoacana de software, código y productos de inteligencia artificial."/>
+<meta property="og:title" content="Monarca Technologies"/>
+<meta property="og:image" content="img/acueducto.webp"/>
+<link rel="icon" type="image/png" href="img/icono-ci-dark.png"/>
+<title>Monarca Technologies — Tecnología michoacana</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Orbitron:wght@600;700;800;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+if (typeof tailwind !== "undefined") {
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter","sans-serif"], heading: ["Space Grotesk","sans-serif"], tech: ["Orbitron","sans-serif"] } } } };
+}
+</script>
+
+<style>
+body{background:#000;color:#ededf0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#f97316;color:#000}
+.hero-bg{position:absolute;inset:0;background:url(img/acueducto.webp) center/cover no-repeat;opacity:.5;filter:saturate(.9)}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(to top,#000 4%,rgba(0,0,0,.6) 42%,rgba(0,0,0,.25) 100%),linear-gradient(to right,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 70%)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+details.faq summary::-webkit-details-marker{display:none}details.faq[open] summary span{transform:rotate(45deg)}details.faq summary span{transition:transform .2s;font-size:1.6rem}
+.rowp{transition:background .25s}.rowp:hover{background:#0b0b0e}.rowp:hover .arr{transform:translateX(8px);color:#f97316}.arr{transition:all .25s}
+</style>
+</head>
+<body>
+<header class="fixed top-0 inset-x-0 z-50 bg-black/80 backdrop-blur-xl border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex items-center justify-between">
+<a href="#"><img alt="Monarca Technologies" class="h-10 w-auto object-contain" src="img/logo-mt-light.png"/></a>
+<nav class="hidden md:flex items-center gap-8 text-xs font-heading font-medium tracking-[0.18em] uppercase text-[#888894]">
+<a class="hover:text-white transition-colors" href="#presentacion">Presentación</a>
+<a class="hover:text-white transition-colors" href="#productos">Productos</a>
+<a class="hover:text-white transition-colors" href="#nosotros">Nosotros</a>
+<a class="hover:text-white transition-colors" href="#preguntas">Preguntas</a>
+<a class="hover:text-white transition-colors" href="#contacto">Contacto</a>
+</nav>
+<a class="text-xs font-heading font-semibold tracking-wider uppercase px-4 py-2 border border-white/30 hover:bg-white hover:text-black transition-all" href="monarcadrive.html">Monarca Drive →</a>
+</div>
+</header>
+
+<main>
+<section class="relative overflow-hidden min-h-screen flex items-end border-b border-[#202026] pt-16">
+<div class="hero-bg" role="img" aria-label="Acueducto de Morelia, Michoacán"></div><div class="hero-fade"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 pb-16 sm:pb-24 w-full">
+<p class="font-tech text-[11px] tracking-[0.3em] text-[#f97316] mb-8">MONARCA TECHNOLOGIES · MORELIA, MICHOACÁN, MÉXICO</p>
+<h1 class="font-heading font-bold uppercase tracking-tight leading-[0.95] text-5xl sm:text-7xl lg:text-[7.5rem] max-w-6xl">Tecnología michoacana para la vida diaria.</h1>
+<p class="mt-10 max-w-2xl text-lg sm:text-xl text-[#888894] font-light leading-relaxed">Desarrollamos software, código y productos de inteligencia artificial que resuelven problemas reales, desde la seguridad vial hasta la educación.</p>
+<div class="mt-12 flex flex-wrap gap-4">
+<a class="font-heading text-xs font-semibold tracking-[0.18em] uppercase px-7 py-4 bg-white text-black hover:bg-[#f97316] transition-colors" href="#productos">Ver productos</a>
+<a class="font-heading text-xs font-semibold tracking-[0.18em] uppercase px-7 py-4 border border-white/30 hover:border-white transition-colors" href="#nosotros">Acerca de nosotros</a>
+</div>
+</div>
+</section>
+
+<section id="presentacion" class="rv border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">01 — PRESENTACIÓN</p>
+<div class="lg:col-span-9">
+<p class="font-heading text-3xl sm:text-5xl font-medium leading-tight tracking-tight">Monarca Technologies es una empresa tecnológica michoacana enfocada en el desarrollo de software, código y productos para múltiples ámbitos de la vida diaria.</p>
+<p class="mt-8 text-lg text-[#888894] font-light leading-relaxed max-w-3xl">Combinamos ingeniería mecatrónica, electrónica embebida e inteligencia artificial para crear soluciones accesibles que funcionan donde se necesitan, incluso sin conexión a internet.</p>
+<div class="mt-16 grid grid-cols-2 lg:grid-cols-4 border-t border-l border-[#202026]">
+<div class="p-6 border-r border-b border-[#202026]"><p class="font-tech text-3xl font-bold text-white">97.8%</p><p class="mt-2 text-xs text-[#888894] uppercase tracking-wider">Exactitud en ojos</p></div>
+<div class="p-6 border-r border-b border-[#202026]"><p class="font-tech text-3xl font-bold text-white">95.0%</p><p class="mt-2 text-xs text-[#888894] uppercase tracking-wider">Exactitud en boca</p></div>
+<div class="p-6 border-r border-b border-[#202026]"><p class="font-tech text-3xl font-bold text-white">&lt;120 ms</p><p class="mt-2 text-xs text-[#888894] uppercase tracking-wider">Latencia de respuesta</p></div>
+<div class="p-6 border-r border-b border-[#202026]"><p class="font-tech text-3xl font-bold text-white">100%</p><p class="mt-2 text-xs text-[#888894] uppercase tracking-wider">Procesamiento local</p></div>
+</div>
+<p class="mt-4 text-xs text-[#888894]">Métricas de validación de Colibrí IA Visión Artificial sobre dataset propio.</p>
+</div>
+</div>
+</section>
+
+<section id="productos" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 pt-24 sm:pt-32 pb-8 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">02 — PRODUCTOS</p>
+<h2 class="lg:col-span-9 font-heading text-4xl sm:text-6xl font-bold uppercase tracking-tight leading-none">Lo que ofrecemos</h2>
+</div>
+<div class="border-t border-[#202026]">
+<a href="monarcadrive.html" class="rowp block border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-12 sm:py-16 grid lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-2"><div class="w-28 h-28 flex items-center justify-center border border-[#202026] bg-[#0d0d11] p-3"><img alt="Monarca Drive" class="w-full h-full object-contain" src="img/icono-md-light.png"/></div></div>
+<div class="lg:col-span-8">
+<p class="font-tech text-[11px] tracking-[0.25em] text-[#f97316] mb-3">PRODUCTO 01</p>
+<h3 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight">Monarca Drive</h3>
+<p class="mt-4 text-lg text-[#888894] font-light max-w-2xl leading-relaxed">Sistema de detección de cansancio en conductores de automóviles. Funciona sin internet y cuesta una fracción de los sistemas comerciales.</p>
+<p class="mt-6 text-sm font-heading tracking-wider uppercase text-white">Presentación técnica disponible → <span class="underline decoration-[#f97316] underline-offset-4" onclick="event.preventDefault();event.stopPropagation();location.href='presentacion.html'">presentacion.html</span></p>
+</div>
+<div class="lg:col-span-2 lg:text-right"><span class="arr font-tech text-4xl inline-block">→</span></div>
+</div>
+</a>
+<a href="colibri.html" class="rowp block border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-12 sm:py-16 grid lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-2"><div class="w-28 h-28 flex items-center justify-center border border-[#202026] bg-[#0d0d11] p-3"><img alt="Colibrí IA" class="w-full h-full object-contain" src="img/icono-ci-light.png"/></div></div>
+<div class="lg:col-span-8">
+<p class="font-tech text-[11px] tracking-[0.25em] text-[#f97316] mb-3">PRODUCTO 02</p>
+<h3 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight">Colibrí IA</h3>
+<p class="mt-4 text-lg text-[#888894] font-light max-w-2xl leading-relaxed">Ecosistema de múltiples modelos de inteligencia artificial pensados para diferentes aplicaciones.</p>
+<p class="mt-6 text-sm font-heading tracking-wider uppercase text-white">Visión artificial · Asistencia educativa · Uichu Go!</p>
+</div>
+<div class="lg:col-span-2 lg:text-right"><span class="arr font-tech text-4xl inline-block">→</span></div>
+</div>
+</a>
+</div>
+</section>
+
+<section id="prototipo" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32">
+<div class="grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">03 — EL PROTOTIPO</p>
+<div class="lg:col-span-9"><h2 class="font-heading text-4xl sm:text-6xl font-bold uppercase tracking-tight leading-none">Monarca Drive en imágenes</h2>
+<p class="mt-6 text-lg text-[#888894] font-light max-w-2xl leading-relaxed">Del banco de pruebas al equipo terminado: así se ve el sistema que detecta el cansancio del conductor.</p></div>
+</div>
+<div class="mt-14 border border-[#202026] bg-gradient-to-b from-[#0d0d11] to-black p-6 sm:p-12">
+<img alt="Prototipo de Monarca Drive: carcasa negra con pantalla OLED, LEDs, botón de encendido y cámara infrarroja" class="w-full max-w-4xl mx-auto object-contain" src="img/proto-principal.webp"/>
+<p class="mt-8 text-center text-sm text-[#888894] max-w-2xl mx-auto">Prototipo 2 (nodo de fusión): carcasa impresa en 3D con pantalla OLED, LEDs de alerta, botón de encendido, ventilador y cámara infrarroja con soporte.</p>
+</div>
+<div class="mt-6 grid md:grid-cols-2 gap-6">
+<figure class="border border-[#202026] bg-[#0d0d11]"><img alt="Prototipo en desarrollo sobre protoboard con la cámara infrarroja encendida" class="w-full aspect-[4/3] object-cover" loading="lazy" src="img/proto-desarrollo.jpg"/><figcaption class="p-5 text-sm text-[#888894]"><span class="font-tech text-[10px] tracking-[0.2em] text-[#f97316] block mb-1">EN DESARROLLO</span>Pruebas del prototipo sobre protoboard, con la cámara infrarroja activa.</figcaption></figure>
+<figure class="border border-[#202026] bg-[#0d0d11]"><img alt="Monarca Drive funcionando: detección en tiempo real sobre una persona sentada frente a la cámara" class="w-full aspect-[4/3] object-cover" loading="lazy" src="img/proto-funcionando.jpg"/><figcaption class="p-5 text-sm text-[#888894]"><span class="font-tech text-[10px] tracking-[0.2em] text-[#f97316] block mb-1">FUNCIONANDO</span>El sistema monitoreando el rostro en tiempo real durante una prueba.</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section id="nosotros" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">04 — ACERCA DE NOSOTROS</p>
+<div class="lg:col-span-9">
+<p class="font-heading text-3xl sm:text-5xl font-medium leading-tight tracking-tight">Nuestra visión es llevar la tecnología de sistemas de inteligencia artificial a Michoacán, a México y al mundo.</p>
+<div class="mt-12 grid sm:grid-cols-3 gap-px bg-[#202026] border border-[#202026]">
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">ÉTICA</p><p class="mt-3 text-[#888894] font-light">Tecnología desarrollada con responsabilidad hacia las personas.</p></div>
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">CÓDIGO ABIERTO</p><p class="mt-3 text-[#888894] font-light">Conocimiento que se comparte para que otros puedan aprender y construir.</p></div>
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">PRIVACIDAD</p><p class="mt-3 text-[#888894] font-light">Sin afectar la privacidad de nuestros usuarios: procesamiento local y sin enviar imágenes a servidores.</p></div>
+</div>
+<div class="mt-16 border border-[#202026] bg-[#0d0d11] p-8 sm:p-10 max-w-3xl">
+<p class="font-tech text-[11px] tracking-[0.3em] text-[#888894]">FUNDADOR</p>
+<h3 class="mt-3 font-heading text-2xl sm:text-3xl font-bold tracking-tight">Víctor Fabricio García Mendoza</h3>
+<p class="mt-3 text-[#888894] font-light leading-relaxed">Estudiante del Centro de Bachillerato Tecnológico Industrial y de Servicios No. 149 (CBTis 149), de la carrera técnica en Mecatrónica.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="compromisos" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">05 — NUESTROS COMPROMISOS</p>
+<div class="lg:col-span-9">
+<p class="font-heading text-3xl sm:text-5xl font-medium leading-tight tracking-tight">Respetamos a nuestros usuarios y no violamos su privacidad.</p>
+<div class="mt-12 grid md:grid-cols-3 gap-px bg-[#202026] border border-[#202026]">
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">PRIVACIDAD</p><p class="mt-3 text-[#888894] font-light leading-relaxed">Todo se procesa en el propio dispositivo. Ninguna imagen sale del equipo ni se envía a un servidor.</p></div>
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">NACIONALISMO</p><p class="mt-3 text-[#888894] font-light leading-relaxed">Tenemos un fuerte compromiso con México: tecnología diseñada, entrenada y construida en Michoacán, para la gente de aquí.</p></div>
+<div class="bg-black p-8"><p class="font-tech text-xs tracking-[0.25em] text-[#f97316]">DEMOCRATIZACIÓN DEL SOFTWARE</p><p class="mt-3 text-[#888894] font-light leading-relaxed">Creemos que el software debe estar al alcance de todos: soluciones accesibles, abiertas y que funcionan sin depender de internet.</p></div>
+</div></div></div>
+</section>
+
+<section id="trayectoria" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">06 — TRAYECTORIA</p>
+<div class="lg:col-span-9">
+<h2 class="font-heading text-4xl sm:text-6xl font-bold uppercase tracking-tight leading-none">De una idea a un ecosistema</h2>
+<ol class="mt-14 border-t border-[#202026]">
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#f97316]">DIC 2025</span><p class="sm:col-span-9 text-[#ededf0]">Nace la idea de Monarca Drive. Inicia la investigación de tecnologías existentes y de accidentes viales.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#f97316]">ABR 2026</span><p class="sm:col-span-9 text-[#ededf0]">Primer prototipo con Raspberry Pi Zero 2W, y modelado e impresión 3D de la carcasa.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#f97316]">MAY 2026</span><p class="sm:col-span-9 text-[#ededf0]">Segundo prototipo con Raspberry Pi 4, sensor inercial y pantalla OLED.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#f97316]">JUN – JUL 2026</span><p class="sm:col-span-9 text-[#ededf0]">Nace Colibrí IA: dataset propio, entrenamiento de las redes convolucionales y conversión a TensorFlow Lite.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#f97316]">AGO 2026</span><p class="sm:col-span-9 text-[#ededf0]">Rediseño del modelo 3D y recopilación de resultados.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-white">DIC 2026 · TENTATIVO</span><p class="sm:col-span-9 text-[#ededf0]">Uichu Go!, el dispositivo de aprendizaje con Colibrí IA Papalotl para escuelas rurales.</p></li>
+<li class="grid sm:grid-cols-12 gap-3 py-6 border-b border-[#202026]"><span class="sm:col-span-3 font-tech text-sm text-[#888894]">PRÓXIMAMENTE</span><p class="sm:col-span-9 text-[#888894]">Pruebas de campo en vehículo, más participantes y lentes oscuros en el dataset, PCB profesional, GPS y una aplicación de análisis.</p></li>
+</ol></div></div>
+</section>
+
+<section id="preguntas" class="border-b border-[#202026]">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">07 — PREGUNTAS FRECUENTES</p>
+<div class="lg:col-span-9 border-t border-[#202026]">
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Monarca Drive necesita internet?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">No. La inteligencia artificial corre dentro del propio equipo, incluidas las advertencias de voz, así que funciona en carretera sin señal y sin pagar rentas mensuales.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Qué pasa con mi privacidad?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Las imágenes se procesan en el momento y se descartan. El equipo no las transmite y solo guarda en su memoria la fecha y la hora de cada evento detectado.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Funciona de noche y con lentes?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Usa una cámara infrarroja y fue entrenado con luz de día, penumbra e infrarrojo nocturno, con y sin anteojos transparentes. Los lentes muy oscuros siguen siendo un caso límite y no se recomiendan por ahora.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Cuánto cuesta?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Fabricar una unidad cuesta alrededor de $1,800 MXN y el precio sugerido es de $2,800 MXN. Los sistemas comerciales comparables cuestan de $15,000 a $45,000 MXN, además de una renta mensual en la nube.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Reemplaza la atención del conductor?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">No. Es un dispositivo de asistencia: avisa a tiempo, pero no sustituye la atención ni el descanso de quien conduce. Recomendamos descansar cada 3 o 4 horas de manejo, aunque no haya alertas.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Qué es Colibrí IA?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Es nuestro ecosistema de modelos de inteligencia artificial: empezó con el modelo de visión artificial de Monarca Drive y hoy incluye modelos de asistencia educativa de distintos tamaños. <a class="text-white underline decoration-[#f97316] underline-offset-4" href="colibri.html">Conoce Colibrí IA</a>.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Cuándo estará listo Uichu Go!?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Está en desarrollo y su realización está prevista de forma tentativa para diciembre de 2026.</p></details>
+<details class="faq border-b border-[#202026] py-6"><summary class="flex justify-between gap-6 cursor-pointer list-none font-heading text-xl sm:text-2xl font-medium">¿Es de código abierto?<span class="font-tech text-[#f97316]">+</span></summary><p class="mt-4 text-[#888894] font-light leading-relaxed max-w-3xl">Es parte de nuestra visión. El repositorio público estará disponible próximamente.</p></details>
+</div></div>
+</section>
+
+<section id="contacto">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 py-24 sm:py-32 grid lg:grid-cols-12 gap-12">
+<p class="lg:col-span-3 font-tech text-[11px] tracking-[0.3em] text-[#888894]">08 — CONTACTO</p>
+<div class="lg:col-span-9 grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="font-heading text-4xl sm:text-5xl font-bold uppercase tracking-tight leading-none">Hablemos</h2>
+<p class="mt-6 text-lg text-[#888894] font-light leading-relaxed">¿Quieres saber más de Monarca Drive o Colibrí IA, o colaborar con nosotros? Escríbenos.</p>
+<a class="mt-8 block font-heading text-lg sm:text-xl underline decoration-[#f97316] underline-offset-4 break-all hover:text-[#f97316]" href="mailto:victor.garcia.engeneering@gmail.com">victor.garcia.engeneering@gmail.com</a>
+<a class="mt-5 inline-block font-heading text-xs font-semibold tracking-[0.18em] uppercase px-6 py-3 border border-white/30 hover:bg-white hover:text-black transition-all" href="https://www.linkedin.com/in/v%C3%ADctor-fabricio-garc%C3%ADa-mendoza-4913933b3" target="_blank" rel="noopener">LinkedIn →</a>
+</div>
+<form id="cf" class="space-y-4" onsubmit="return enviar(event)">
+<input id="cn" required placeholder="Tu nombre" class="w-full bg-[#0d0d11] border border-[#202026] px-4 py-3 text-white placeholder-[#888894] focus:border-[#f97316] focus:ring-0 outline-none"/>
+<input id="cc" type="email" required placeholder="Tu correo" class="w-full bg-[#0d0d11] border border-[#202026] px-4 py-3 text-white placeholder-[#888894] focus:border-[#f97316] focus:ring-0 outline-none"/>
+<textarea id="cm" required rows="5" placeholder="Tu mensaje" class="w-full bg-[#0d0d11] border border-[#202026] px-4 py-3 text-white placeholder-[#888894] focus:border-[#f97316] focus:ring-0 outline-none"></textarea>
+<button class="font-heading text-xs font-semibold tracking-[0.18em] uppercase px-7 py-4 bg-white text-black hover:bg-[#f97316] transition-colors" type="submit">Enviar por correo</button>
+<p class="text-xs text-[#888894]">Se abrirá tu aplicación de correo con el mensaje listo para enviar.</p>
+</form>
+</div></div>
+</section>
+
+</main>
+
+<footer class="max-w-7xl mx-auto px-6 sm:px-8 py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<img alt="Monarca Technologies" class="h-8 w-auto object-contain" src="img/logo-mt-light.png"/>
+<a href="monarcadrive.html"><img alt="Monarca Drive" class="h-10 w-auto object-contain" src="img/logo-md-light.png"/></a>
+<a href="colibri.html"><img alt="Colibrí IA" class="h-10 w-auto object-contain" src="img/logo-ci-light.png"/></a>
+</div>
+<p class="text-xs text-[#888894] text-center sm:text-right">© 2026 Monarca Technologies · Morelia, Michoacán, México<br/>Respetamos tu privacidad: tus datos no salen de tu dispositivo.</p>
+</footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll("section:not(:first-of-type)").forEach(el=>{el.classList.add("rv");io.observe(el)});
+function enviar(e){e.preventDefault();var n=document.getElementById("cn").value,c=document.getElementById("cc").value,m=document.getElementById("cm").value;location.href="mailto:victor.garcia.engeneering@gmail.com?subject="+encodeURIComponent("Contacto desde la web de Monarca Technologies - "+n)+"&body="+encodeURIComponent(m+"\n\n"+n+" ("+c+")");return false}
+</script>
+</body></html>
